@@ -26,24 +26,6 @@ class App extends Component {
     total: 0,
   };
 
-  // handlePositiveFeedback = () => {
-  //   this.setState(prevState => ({
-  //     good: prevState.good + 1,
-  //   }));
-  // };
-
-  // handleNeutralFeedback = () => {
-  //   this.setState(prevState => ({
-  //     neutral: prevState.neutral + 1,
-  //   }));
-  // };
-
-  // handleNegativeFeedback = () => {
-  //   this.setState(prevState => ({
-  //     bad: prevState.bad + 1,
-  //   }));
-  // };
-
   handleClick = e => {
     const { name } = e.target;
     console.log(e.target);
@@ -77,9 +59,6 @@ class App extends Component {
         <FeedbackOptions
           options={options}
           onLeaveFeedback={this.handleClick}
-          // onPositive={this.handlePositiveFeedback}
-          // onNeutral={this.handleNeutralFeedback}
-          // onNegative={this.handleNegativeFeedback}
         />
         <Section title="Statistics" />
         {this.countTotalFeedback() !== 0 ? (
